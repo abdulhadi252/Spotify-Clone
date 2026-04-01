@@ -1,166 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-            background-color:bisque;
-        }
+    background: linear-gradient(135deg, #121212, #1db954);
+    color: #fff;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* NAVBAR */
+nav {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+}
 
-        nav {
-            font-family: sans-serif;
-        }
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
 
-        nav ul {
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            height: 65px;
-            background-color: black;
-            color: white;
-        }
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-        nav ul li {
-            padding: 0 12px;
-        }
-        
-        nav ul li a{
-            color: white;
-            font-size: larger;
-            text-decoration: none;
-        }
+.brand img {
+    width: 40px;
+    margin-right: 10px;
+}
 
-        .brand img {
-            width: 44px;
-            padding: 0 8px;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
 
-        .brand {
-            display: flex;
-            align-items: center;
-            font-weight: bolder;
-            font-size: 1.3rem;
-            margin: auto 50px;
-        }
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
 
-        .container {
-            min-height: 72vh;
-            background-color: black;
-            color: white;
-            font-family: sans-serif;
-            display: flex;
-            margin: 23px auto;
-            width: 90%;
-            border-radius: 12px;
-            padding: 34px;
-            background-image: url('bg.jpg');
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
+/* SONG LIST */
+.songList h1 {
+    margin-bottom: 20px;
+}
 
-        .bottom {
-            position: sticky;
-            bottom: 0;
-            height: 130px;
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+.songItemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-        .icons {
-            margin-top: 14px;
-        }
+/* SONG ITEM */
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
 
-        .icons i {
-            cursor: pointer;
-        }
+.songItem:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.02);
+}
 
-        #myProgressBar {
-            width: 80vw;
-            cursor: pointer;
-        }
+.songItem img {
+    width: 50px;
+    border-radius: 50%;
+}
 
-        .songItemContainer {
-            margin-top: 74px;
-        }
+.songName {
+    flex: 1;
+    margin-left: 15px;
+}
 
-        .songItem {
-            height: 50px;
-            display: flex;
-            background-color: white;
+.timestamp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-            color: black;
-            margin: 12px 0;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 34px;
-        }
+.timestamp i {
+    cursor: pointer;
+    color: #1db954;
+}
 
-        .songItem img {
-            width: 43px;
-            margin: 0 23px;
-            border-radius: 34px;
-        }
+/* PLAYER BOTTOM */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .timestamp {
-            margin: 0 23px;
-        }
+/* PROGRESS BAR */
+#myProgressBar {
+    width: 80%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
-        .timestamp i {
-            cursor: pointer;
-        }
+/* CONTROLS */
+.icons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 10px;
+}
 
-        .songInfo {
-            position: absolute;
-            left: 10vw;
-            font-family: 'Varela Round', sans-serif;
-        }
+.icons i {
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-        .songInfo img {
-            opacity: 0;
-            transition: opacity 0.4s ease-in;
-            width: 42px;
-        }
+.icons i:hover {
+    transform: scale(1.2);
+    color: #1db954;
+}
 
-              @media (max-width:900px) {
-            .container {
-                flex-direction: column;
-                padding: 12px;
-            }
+/* SONG INFO */
+.songInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-            .songInfo {
-                left: 0;
-                text-align: center;
-                margin-bottom: 15px;
-                margin-top: -12px;
+.songInfo img {
+    width: 40px;
+    opacity: 0;
+    transition: 0.4s;
+}
 
-            }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            .songInfo img {
-                margin-left: 50px;
-                margin-right: 10px;
-            }
+    .container {
+        width: 95%;
+    }
 
-            .songItem{
-                flex-direction: column;
-                height: auto;
-                padding: 12px 0;
-            }
+    .songItem {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        border-radius: 15px;
+    }
 
-            .songItem img{
-                margin: 0 0 12px 0;
-                width: 60px;
-            }
-            .icons{
-                margin-top : 60px;
-            }
+    .songName {
+        margin: 10px 0;
+    }
 
-            .bottom{
-                height: auto;
-                padding: 12px 0;
-            }
-        }
+    .icons {
+        gap: 15px;
+    }
+
+    .icons i {
+        font-size: 25px;
+    }
+
+    #myProgressBar {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    .songItem img {
+        width: 40px;
+    }
+
+    .brand {
+        font-size: 1.2rem;
+    }
+}
