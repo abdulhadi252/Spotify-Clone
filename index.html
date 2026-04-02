@@ -6,144 +6,335 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-free-7.0.1-web/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <div class="noise"></div>
+
+    <!-- NAVBAR -->
     <nav>
-        <ul>
-            <div class="brand"><img src="logo.png" alt="Spotify"> Spotify</div>
-            <li><a href="">Home</a> </li>
-        </ul>
+        <div class="navbar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    </svg>
+                </div>
+                <span>Spotify</span>
+            </div>
+            <ul>
+                <li><a href="" class="nav-link active">Home</a></li>
+                <li><a href="" class="nav-link">Search</a></li>
+                <li><a href="" class="nav-link">Library</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- MAIN CONTENT -->
     <div class="container">
+
+        <!-- SONG LIST PANEL -->
         <div class="songList">
-            <h1>Spotify Clones</h1>
+            <div class="panel-header">
+                <h1>Your Playlist</h1>
+                <span class="track-count">15 tracks</span>
+            </div>
+
             <div class="songItemContainer">
 
-                
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">01</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:34</span>
+                        <i id="0" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="9"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">02</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:12</span>
+                        <i id="1" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="10"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">03</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:58</span>
+                        <i id="2" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="11"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">04</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">06:21</span>
+                        <i id="3" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="12"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">05</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:47</span>
+                        <i id="4" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="13"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">06</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:33</span>
+                        <i id="5" class="far songItemPlay fa-play-circle"></i>
+                    </span>
                 </div>
 
                 <div class="songItem">
-                    <img alt="1">
-                    <span class="songName"></span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="14"
-                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                    <div class="song-left">
+                        <div class="track-num">07</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:09</span>
+                        <i id="6" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">08</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:55</span>
+                        <i id="7" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">09</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:44</span>
+                        <i id="8" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">10</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:17</span>
+                        <i id="9" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">11</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:02</span>
+                        <i id="10" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">12</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:28</span>
+                        <i id="11" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">13</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">06:04</span>
+                        <i id="12" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">14</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:39</span>
+                        <i id="13" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <div class="song-left">
+                        <div class="track-num">15</div>
+                        <img alt="cover">
+                        <div class="song-meta">
+                            <span class="songName">Song Title</span>
+                            <span class="song-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <span class="songlistplay">
+                        <span class="timestamp">05:51</span>
+                        <i id="14" class="far songItemPlay fa-play-circle"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ALBUM ART BANNER -->
+        <div class="songBanner">
+            <div class="banner-content">
+                <div class="banner-art">
+                    <img src="bg.jpg" alt="Album Art" class="banner-img">
+                    <div class="banner-overlay"></div>
+                </div>
+                <div class="banner-info">
+                    <p class="banner-label">Now Playing</p>
+                    <h2 class="banner-title">Your Playlist</h2>
+                    <p class="banner-sub">15 Songs • Mixed Artists</p>
                 </div>
             </div>
         </div>
-        <div class="songBanner"></div>
+
     </div>
 
+    <!-- BOTTOM PLAYER -->
     <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-        <div class="icons">
-            <!-- fontawesome icons -->
-            <i class="fas fa-3x fa-step-backward" id="previous"></i>
-            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
-            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        <div class="progress-section">
+            <span class="time-label" id="currentTime">0:00</span>
+            <div class="progress-track">
+                <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="time-label">05:34</span>
         </div>
-        <div class="songInfo">
-            <img src="cover.gif" alt="" id="gif"> <span id="masterSongName">Arz Kiya Hai
-                Release]</span>
+
+        <div class="player-center">
+            <div class="songInfo">
+                <img src="cover.gif" alt="" id="gif">
+                <div class="song-text">
+                    <span id="masterSongName">Arz Kiya Hai</span>
+                    <span class="song-artist-bottom">Artist Name</span>
+                </div>
+            </div>
+
+            <div class="icons">
+                <button class="ctrl-btn secondary" title="Shuffle">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="ctrl-btn" id="previous" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="ctrl-btn play-btn" id="masterPlay" title="Play/Pause">
+                    <i class="far fa-play-circle"></i>
+                </button>
+                <button class="ctrl-btn" id="next" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="ctrl-btn secondary" title="Repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+
+            <div class="volume-section">
+                <i class="fas fa-volume-up vol-icon"></i>
+                <input type="range" class="volume-bar" min="0" max="100" value="80">
+            </div>
         </div>
     </div>
 
